@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include necessary libraries and stylesheets -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-mobile-controls@1.0.0/dist/aframe-mobile-controls.min.js"></script>
+    <!-- Other styles and meta tags as needed -->
+    <script src="./script.js"></script>
+    <script src="./smth.css"></script>
+
+    
+    <!-- Other meta tags and title -->
+    <link rel="stylesheet" type="text/css" href="smth.css">
+    <!-- The 'href' attribute should be the path to your CSS file -->
+
+
+</head>
+<body>
+    <a-scene background="color: #000000">
+        <!-- Camera with mobile controls -->
+        <a-camera wasd-controls-enabled="true" twoway-motion tilt-turn position="0 0 15"></a-camera>
+        <!-- Other entities (sky, text, etc.) -->
+ 
+        <a-scene>
+         <a-assets>
+           <img id="img1" src="img1.jpg">
+         </a-assets>
+         <a-scene>
+          <a-assets>
+            <video id="sky-video" src="test.mp4" autoplay loop="true"></video>
+          </a-assets>
+          <a-sky src="#sky-video"></a-sky>
+        </a-scene>
+       
+         <!-- Using the asset management system. -->
+         <a-image src="#img1" width="7" height="7" position="-18 1 2"></a-image>
+         
+         <a-assets>
+            <img id="img3" src="img3.heic">
+          </a-assets>
+        
+          <!-- Using the asset management system. -->
+          <a-image src="#img3" width="7" height="7" position="38 1 2"></a-image>
+        
+
+
+          <a-assets>
+            <img id="img4" src="img4.heic">
+          </a-assets>
+        
+          <!-- Using the asset management system. -->
+          <a-image src="#img4" width="7" height="7" position="45 1 2"></a-image>
+
+
+          <a-assets>
+            <img id="img5" src="img5.heic">
+          </a-assets>
+        
+          <!-- Using the asset management system. -->
+          <a-image src="#img5" width="7" height="7" position="52 1 2"></a-image>
+
+          <a-assets>
+            <img id="img6" src="img6.heic">
+          </a-assets>
+        
+          <!-- Using the asset management system. -->
+          <a-image src="#img6" width="7" height="7" position="-18 -7 2"></a-image>
+       
+
+        
+
+
+     
+     
+
+      <a-entity
+
+      
+
+      ></a-entity>
+   
+      </a-entity>
+   </a-entity>
+     <!--Text-->
+     <a-entity
+     position="0 11 0"
+     text="font: exo2bold; align: center; width: 40; color: red; value: Hot Air Balloon"
+     animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 20000"></a-entity>
+
+     <a-entity
+        position="-18 7 2"
+     text="font: exo2bold; align: center; width: 25; color: red; value: Charles Law">
+     </a-entity>
+
+     <a-entity
+        position="0 6 1"
+     text="font: exo2bold; align: center; width: 25; color: red; value: How Gas Molecules Cause Pressure in a Hot Air Balloon">
+     </a-entity>
+     
+     <a-entity
+        position="0 -4 1"
+     text="font: exo2bold; align: center; width: 20; color: black; value: 
+Gas Molecules and Pressure:
+Gas molecules collide with the balloon's walls, causing pressure.
+Inside the Balloon:
+Heating the air increases the energy and speed of gas molecules.
+Faster-moving molecules hit the balloon's walls harder and more often, increasing pressure.
+The open bottom of the balloon allows some air to escape, balancing inside and outside pressure.
+Outside the Balloon:
+Atmospheric pressure is constant at a given altitude.
+Air outside is cooler and denser than the heated air inside the balloon."
+     
+      >
+     </a-entity>
+     
+     <a-entity
+        position="25 6 1"
+     text="font: exo2bold; align: center; width: 25; color: red; value: How Conditions Change Inside and Outside">
+     </a-entity>
+     <a-entity
+     position="25 -4 1"
+     
+  text="font: exo2bold; align: center; width: 20; color: black; value: 
+
+Initial Condition (Ground Level):
+Inside: Air temperature and pressure match the outside.
+Outside: Normal atmospheric pressure and temperature.
+Heating the Air:
+Inside: Burner heats the air, making it less dense.
+Outside: Cooler and denser air remains the same.
+Rising Balloon:
+Inside: Pressure slightly decreases with altitude, but heating continues.
+Outside: Atmospheric pressure decreases with altitude."
+  
+   >
+  </a-entity>
+     
+              
+             <a-sky src="#sky-video"></a-sky>
+     
+    </a-scene>
+    <!-- WASD Buttons -->
+    <div id="wasd-controls">
+        <button class="button" id="btnW">W</button>
+        <button class="button" id="btnA">A</button>
+        <button class="button" id="btnS">S</button>
+        <button class="button" id="btnD">D</button>
+    </div>
+    <!-- Include your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
